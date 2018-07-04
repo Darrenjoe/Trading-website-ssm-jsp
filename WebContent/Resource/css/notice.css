@@ -1,0 +1,42 @@
+/* 信息栏*/
+.not-top{height:170px;background:#FCF16E;}
+.not-t-box{width:1300px;margin:0 auto 0;}
+.not-t-box img{height:130px;width:130px;float:left;margin:28px 0 0 60px;border-radius: 50%;}
+.n-t-b-user{line-height:55px;text-align: left;float:left;margin:36px 0 0 30px;font-family:"黑体";font-size:26px;color:#6D6D6D;}
+.n-t-b-user p{display:inline;}
+.n-t-b-bot{height: 120px;float:right;margin:80px 100px 0 0;}
+.n-t-b-bot button{width:100px;height:50px;font-size:24px;background: #b8e2f8;border-style: none;}
+
+/*搜索框*/
+.mer-top{height:50px;width:465px;margin: 50px auto;box-shadow:2px 2px 10px gray;background: #b5d2ff;border-radius:21px;}
+#soso{width:380px;height:36px;margin:5px 0 0 5px;outline:none;padding-left:8px;float:left;font-size:22px;border-top-left-radius:21px;border-bottom-left-radius:21px;}
+
+.mer-t-s-r{float:left;border-radius:20px;}
+.mer-t-s-r button{float:left;margin-left:5px;height: 49px;width:49px;text-align: center;border-style:none;background:#b5d2ff;}
+.mer-t-s-r button img{width:35px;height: 35px;}
+
+/*公告栏消息列表*/
+.not-new{width:1300px;margin:0 auto 0px;text-align: center;}
+
+.not-next{width:1300px;height:80px;margin:20px auto 0;text-align: center;}
+.not-next button{width:100px;height:50px;font-size:24px;margin-right:100px;}
+
+/*弹出层*/
+#bg{width:100%;height:100%;top:0px;left:0px;position:absolute;filter: Alpha(opacity=50);opacity:0.5; display:none;z-index:99;background: #fff;}
+#popbox{position:absolute;width:400px; height:410px; left:50%; top:50%; margin:-205px 0 0 -200px;display:none;background:#F3F3F3;z-index:120;font-size:18px;font-family:"楷体";}
+#popbox h1{text-align:center;background:#FEE600;margin-top:0;line-height:50px;}
+#popbox h2{text-align:left;margin:8px 0 4px 20px;font-size:22px;font-weight:bold;}
+#popbox label{display: block;margin-left:20px;}
+#popbox label>span{float: left;padding-right: 10px;margin-top:3px;font-size:22px;}
+#popbox input{border: none;color: #525252;height: 30px;margin-bottom: 8px;margin-top: 2px;padding: 5px 0px 5px 5px;width:300px;;border-radius: 5px;}
+#popbox textarea{resize:none;width:360px;height:200px;margin:0 0 8px 20px;border-radius:5px;}
+#popbox button{float:right;margin-right:15px;width:80px;height:40px;background:#FEE600;}
+
+/*消息栏样式表*/
+table.ind-ann{font-size:26px;width:1000px;margin:50px auto 50px;text-align:center;}
+.indth1{width:300px;height: 40px;padding:10px 45px;background: rgb(181,210,255);color:white;}
+.induser{width:210px;height:30px;border:3px dashed #fff;border-radius:15px;}
+.indth2{width:700px;height: 40px;padding:10px 105px;background: rgb(181,210,255);color:white;}
+.indmsg{width:490px;height:30px;border:3px dashed #fff;border-radius:15px;}
+#tduser{width:200px;padding:10px 50px;border-right:2px solid gray;border-bottom:2px solid gray;font-size:22px;}
+#tdmessge{width:700px;padding:10px 50px;border-bottom:2px solid gray;font-size:22px;height:40px;}

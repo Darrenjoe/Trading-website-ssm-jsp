@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xj.mapper.IUser">
+
+	<!-- 添加用户信息 -->
+	<insert id="addUser" parameterType="com.xj.entity.User">
+		INSERT
+		INTO USER (
+		ID,
+		LOGINNAME,
+		USERNAME,
+		PASSWORD,
+		STATE,
+		ROLE,
+		NAME,
+		COLLEGE,
+		TELEPHONE,
+		QQNUMBER,
+		WECHAT,
+		GENDER,
+		SIGNATURE,
+		PHOTOURL
+		)
+		VALUES (
+		#{id,jdbcType=VARCHAR},
+		#{loginName,jdbcType=VARCHAR},
+		#{userName,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{state,jdbcType=INTEGER},
+		#{role,jdbcType=INTEGER},
+		#{name,jdbcType=VARCHAR},
+		#{college,jdbcType=VARCHAR},
+		#{telephone,jdbcType=VARCHAR},
+		#{qqNumber,jdbcType=VARCHAR},
+		#{wechat,jdbcType=VARCHAR},
+		#{gender,jdbcType=VARCHAR},
+		#{signature,jdbcType=VARCHAR},
+		#{photoUrl,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<!-- 根据ID获取用户 -->
+	<select id="getUserById" parameterType="string" resultType="com.xj.entity.User">
+		SELECT *
+		FROM USER
+		WHERE id = #{id}
+	</select>
+
+	<!-- 根据登录名获取用户 -->
+	<select id="getUserByName" parameterType="string" resultType="com.xj.entity.User">
+		SELECT *
+		FROM USER
+		WHERE LOGINNAME = #{loginName}
+	</select>
+
+	<!-- 获取全部用户 -->
+	<select id="getAllUser" resultType="User">
+		SELECT * FROM USER
+	</select>
+
+	<!-- 修改个人信息 -->
+	<update id="updateUser" parameterType="com.xj.entity.User">
+		UPDATE USER SET
+		USERNAME = #{userName},
+		COLLEGE = #{college},
+		TELEPHONE = #{telephone},
+		QQNUMBER = #{qqNumber},
+		WECHAT = #{wechat},
+		GENDER = #{gender},
+		SIGNATURE = #{signature}
+		WHERE ID = #{id,jdbcType=VARCHAR}
+	</update>
+	
+	<!-- 修改密码 -->
+	<update id="updatePwd" parameterType="com.xj.entity.User">
+		UPDATE USER SET
+		PASSWORD = #{password}
+		WHERE ID = #{id,jdbcType=VARCHAR}
+	</update>
+
+	<!-- 根据id更新头像 -->
+	<update id="updatePhoto" parameterType="com.xj.entity.User">
+		UPDATE USER SET
+		PHOTOURL = #{photoUrl,jdbcType=VARCHAR}
+		WHERE ID = #{id,jdbcType=VARCHAR}
+	</update>
+	
+	<!--<delete id="deleteUserById" parameterType="int"> DELETE FROM USER WHERE 
+		id = #{id} </delete> -->
+
+</mapper>

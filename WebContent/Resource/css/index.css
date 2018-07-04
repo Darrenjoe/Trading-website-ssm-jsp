@@ -1,0 +1,67 @@
+/* 商品展示框 */
+.index-new{padding-bottom: 35px; background:#F9F9F9;}
+/* 二手上新 */
+.ind-n-title{width:1300px;height:400px;background:#ffffff;margin:0 auto 0;}
+.ershou-1{float: left;margin:50px 0 0 100px;}
+.ershou-2{width:250px;height: 300px;float: left;margin:60px 0 0 15px;font-family:"幼圆";}
+.ershou-2 img{width:250px;height: 250px;}
+.ershou-2 img:hover{width:260px;height: 260px;}
+.ershou-2 p{text-align: center;line-height: 25px;}
+/* 毕业好物 */
+.ind-n-show{width:1300px;height:460px;margin:35px auto 0;background:#ffffff;padding-top:40px;}
+.biye-1{float: left;}
+.ind-n-show ul{float: left; font-family: "幼圆";}
+.ind-n-show li{display: block;float: left;width: 210px; height: 210px;text-align: center;}
+.ind-n-show li img{width:210px; height: 210px;}
+.ind-n-show li img:hover{width:220px; height: 220px;}
+.ind-n-show li p{line-height: 30px;margin-top:30px;font-size:20px;}
+.biye-word{background:#ebf2fa;}
+/* 二手书籍 */
+.ind-n-book{width:1300px;height:450px;margin:35px auto 0;background:#f4f4f4;padding-top:20px;}
+.esshuji{margin-left: 120px;float: left;}
+.ind-n-book ul{float: left;}
+.ind-n-book ul li{float: left;display: block;background: white;}
+
+.esshuji-1{margin-left: 10px;}
+.esshuji-1 li{width:190px;height: 200px;margin-left:10px;text-align: center;}
+.esshuji-1 img{width:130px;height:130px;margin-top:10px;}
+.esshuji-1 img:hover{width: 140px;height: 140px;}
+.esshuji-1 li p{line-height: 20px;font-family:"幼圆";}
+
+.esshuji-2{margin-left: 40px;}
+.esshuji-2 li{width:190px;height: 205px;text-align: center;}
+.esshuji-2 img{width:130px;height:130px;margin-top:10px;}
+.esshuji-2 img:hover{width: 140px;height: 140px;}
+.esshuji-2 li p{line-height: 20px;font-family:"幼圆";}
+
+.esshuji-3{margin-left: 130px;margin-top:10px;}
+.esshuji-3 li{width:190px;height: 200px;margin-left:10px;text-align: center;}
+.esshuji-3 img{width:130px;height:130px;margin-top:10px;}
+.esshuji-3 img:hover{width: 140px;height: 140px;}
+.esshuji-3 li p{line-height: 20px;font-family:"幼圆";}
+
+/* 广告栏位 */
+.index-adv{ margin: 0 auto 0;text-align:center;}
+.index-adv img{width:1300px;}
+
+/*flash*/
+* {text-decoration: none;}
+#container {position: relative;width: 1300px;height: 740px;overflow: hidden;margin:72px auto 0;}
+#list {position: absolute;z-index: 1;width: 6500px;height: 700px;}
+#list img {float: left;width: 1300px;height: 700px;}
+#buttons {position: absolute;left: 630px;bottom: 60px;z-index: 2;height: 10px;width: 55px;}
+#buttons span {float: left;margin-right: 5px;width: 10px;height: 10px;border: 1px solid #fff;border-radius: 50%;background: #333;cursor: pointer;}
+#buttons .on {background: orangered;}
+.arrow {position: absolute;top: 300px;z-index: 2;display: none;width: 40px;height: 40px;font-size: 36px;font-weight: bold;line-height: 39px;text-align: center;color: #fff;background-color: RGBA(0, 0, 0, .3);cursor: pointer;}
+.arrow:hover {background-color: RGBA(0, 0, 0, .7);}
+#container:hover .arrow {display: block;}
+#prev {left: 20px;}
+#next {right: 20px; }
+/*消息栏样式表*/
+table.ind-ann{font-size:26px;width:1000px;margin:50px auto 50px;text-align:center;}
+.indth1{width:300px;height: 40px;padding:10px 45px;background: rgb(181,210,255);color:white;}
+.induser{width:210px;height:30px;border:3px dashed #fff;border-radius:15px;}
+.indth2{width:700px;height: 40px;padding:10px 105px;background: rgb(181,210,255);color:white;}
+.indmsg{width:490px;height:30px;border:3px dashed #fff;border-radius:15px;}
+#tduser{width:200px;padding:10px 50px;border-right:2px solid gray;border-bottom:2px solid gray;font-size:22px;}
+#tdmessge{width:700px;padding:10px 50px;border-bottom:2px solid gray;font-size:22px;height:40px;}

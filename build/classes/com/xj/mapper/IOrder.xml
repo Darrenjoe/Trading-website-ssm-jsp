@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xj.mapper.IOrder">
+
+	<!-- 添加订单 -->
+	<insert id="addOrder" parameterType="com.xj.entity.Orders">
+		INSERT INTO ORDERS (
+		ID,
+		ORDERNUM,
+		USERID,
+		CREATETIME,
+		RECEIVERNAME,
+		RECEIVERADDR,
+		DELIVERYTIME,
+		PRICE,
+		STATE,
+		ORDERSURE,
+		SELLERID,
+		PRODUCTNAME
+		)
+		VALUES (
+		#{id,jdbcType=VARCHAR},
+		#{orderNum,jdbcType=VARCHAR},
+		#{userId,jdbcType=VARCHAR},
+		#{createTime},
+		#{receiverName,jdbcType=VARCHAR},
+		#{receiverAddr,jdbcType=VARCHAR},
+		#{deliveryTime},
+		#{price,jdbcType=VARCHAR},
+		#{state,jdbcType=INTEGER},
+		#{orderSure,jdbcType=INTEGER},
+		#{sellerId,jdbcType=VARCHAR},
+		#{productName,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<!-- 获取全部订单 -->
+	<select id="getAllOrder" resultType="Orders">
+		SELECT * FROM ORDERS
+	</select>
+
+	<!-- 根据买家ID获取订单 -->
+	<select id="getOrdersByUserId" parameterType="string"
+		resultType="com.xj.entity.Orders">
+		SELECT *
+		FROM ORDERS
+		WHERE userId = #{userId}
+	</select>
+
+	<!-- 根据卖家ID获取订单 -->
+	<select id="getOrdersBySellerId" parameterType="string"
+		resultType="com.xj.entity.Orders">
+		SELECT *
+		FROM ORDERS
+		WHERE sellerId = #{sellerId}
+	</select>
+
+	<!-- 根据ID获取订单 -->
+	<select id="getOrdersById" parameterType="string" resultType="com.xj.entity.Orders">
+		SELECT *
+		FROM ORDERS
+		WHERE id = #{id}
+	</select>
+	
+	<!-- 根据id更新订单状态 -->
+	<update id="sureMyOrder" parameterType="com.xj.entity.Orders">
+		UPDATE ORDERS SET
+		ORDERSURE = #{orderSure,jdbcType=INTEGER}
+		WHERE ID = #{id,jdbcType=VARCHAR}
+	</update>
+
+</mapper>

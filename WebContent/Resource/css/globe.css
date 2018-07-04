@@ -1,0 +1,28 @@
+/* 所有的页眉和页脚 */
+*{margin:0; padding:0;}
+body{ background:#F9F9F9;font-family: "新宋体","Times New Roman", Times, serif; font-size:16px;}
+/*header*/
+header{height: 70px;width: 100%; background:rgb(209,228,243);box-shadow:0 1px 10px gray; position:fixed; top:0px;z-index:6;}
+.top{width: 1300px;margin: 0 auto 0;}
+.logo{float: left;height: 50px;margin-top:13px;}
+.logo img{height: 50px;}
+.globe-top{margin:0;height: 70px;}
+/*nav*/
+.nav{ margin-top:18px;line-height:36px;float: left;margin-left: 30px;}
+.nav a{text-align:center; font-size:26px; font-weight: 600; color:#6D6D6D;text-decoration:none;}
+.nav a:hover{text-decoration:none;font-size: 30px;}
+.nav li{ float:left;list-style: none;}
+.nav li a{text-decoration:none; display: block; width:130px; height:36px;}
+/*用户下拉菜单*/
+#user{float:right;height:100px;width:130px; margin-top:24px;margin-right: 10px; font-size: 20px;color:#6D6D6D;}
+#user p{float: left;}
+#user img{float:right;width:30px;}
+#user ul{ list-style:none;}
+#user ul li{ float:left; line-height:30px; text-align:center; width:130px;}
+#user a{ text-decoration:none;color:#6D6D6D; display:block;}
+#user a:hover{ color:#F00;}
+#user ul li ul li{ float:none;background:rgb(209,228,243);}
+#user ul li ul{ display:none;}
+/*页脚*/
+footer{height: 50px;margin-top:0; background:rgb(209,228,243);font-size:17px;padding-top: 15px;}
+footer p{text-align: center;vertical-align: middle;}

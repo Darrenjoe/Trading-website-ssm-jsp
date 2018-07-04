@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xj.mapper.ICollect">
+
+	<!-- 添加收藏 -->
+	<insert id="addCollect" parameterType="com.xj.entity.Collect">
+		INSERT INTO COLLECT (
+		ID,
+		PRODUCTID,
+		CREATETIME,
+		COLLECTIONER
+		)
+		VALUES (
+		#{id,jdbcType=VARCHAR},
+		#{productId,jdbcType=VARCHAR},
+		#{createTime},
+		#{collectioner,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<!-- 获取全部收藏 -->
+	<select id="getAllCollect" resultType="Collect">
+		SELECT * FROM COLLECT
+	</select>
+
+	<!-- 根据用户ID获取收藏 -->
+	<select id="getCollectByUserId" parameterType="string"
+		resultType="com.xj.entity.Collect">
+		SELECT *
+		FROM COLLECT
+		WHERE collectioner = #{collectioner}
+	</select>
+
+	<!-- 删除收藏信息 -->
+	<delete id="deleteCollectByProductId">
+		DELETE FROM COLLECT WHERE PRODUCTID =
+		#{id,jdbcType=VARCHAR}
+	</delete>
+
+
+</mapper>

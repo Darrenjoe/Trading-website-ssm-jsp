@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xj.mapper.IProduct">
+
+	<!-- 添加商品 -->
+	<insert id="addProduct" parameterType="com.xj.entity.Product">
+		INSERT INTO PRODUCT (
+		ID,
+		NAME,
+		CATEGORY,
+		PRICE,
+		INVENTORY,
+		IMGURL,
+		PRODUCTDESC,
+		STATE,
+		USERID
+		)
+		VALUES (
+		#{id,jdbcType=VARCHAR},
+		#{name,jdbcType=VARCHAR},
+		#{gategory,jdbcType=VARCHAR},
+		#{price,jdbcType=VARCHAR},
+		#{inventory,jdbcType=INTEGER},
+		#{imgUrl,jdbcType=VARCHAR},
+		#{productDesc,jdbcType=VARCHAR},
+		#{state,jdbcType=INTEGER},
+		#{userId,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<!-- 获取全部商品 -->
+	<select id="getAllProduct" resultType="Product">
+		SELECT * FROM PRODUCT
+	</select>
+
+	<!-- 根据种类获取商品 -->
+	<select id="getProductKind" parameterType="com.xj.entity.param.QueryConditionData"
+		resultType="com.xj.entity.Product">
+		SELECT *
+		FROM PRODUCT P
+		WHERE P.state = 0
+		<if
+			test=" queryConditionData.productDesc != null and queryConditionData.productDesc != '' ">
+			AND P.PRODUCTDESC LIKE CONCAT(CONCAT('%',
+			#{queryConditionData.productDesc}),'%')
+		</if>
+		<if
+			test=" queryConditionData.gategory != null and queryConditionData.gategory != '' ">
+			AND P.CATEGORY LIKE CONCAT(CONCAT('%',
+			#{queryConditionData.gategory}),'%')
+		</if>
+	</select>
+
+	<!-- 根据商品简介获取商品 -->
+	<select id="getProductByProductDesc" parameterType="String"
+		resultType="com.xj.entity.Product">
+		SELECT *
+		FROM PRODUCT P
+		WHERE P.state = 0
+		<if test=" productDesc != null and productDesc != '' ">
+			AND P.PRODUCTDESC LIKE CONCAT(CONCAT('%', #{productDesc}),'%')
+		</if>
+	</select>
+
+	<!-- 根据ID获取商品 -->
+	<select id="getProductById" parameterType="string"
+		resultType="com.xj.entity.Product">
+		SELECT *
+		FROM PRODUCT
+		WHERE id = #{id}
+	</select>
+
+	<!-- 根据ID删除商品信息 -->
+	<delete id="deleteProductById">
+		DELETE FROM PRODUCT WHERE ID = #{id,jdbcType=VARCHAR}
+	</delete>
+
+	<!-- 根据用户ID获取商品 -->
+	<select id="getProductByUserId" parameterType="string"
+		resultType="com.xj.entity.Product">
+		SELECT *
+		FROM PRODUCT
+		WHERE userId = #{userId}
+	</select>
+
+	<!-- 根据用户ID删除商品信息 -->
+	<delete id="deleteProductByUserId">
+		DELETE FROM PRODUCT WHERE USERID =
+		#{userId,jdbcType=VARCHAR}
+	</delete>
+
+	<!-- 根据商品名称获取商品 -->
+	<select id="getProductByName" parameterType="string"
+		resultType="com.xj.entity.Product">
+		SELECT *
+		FROM PRODUCT
+		WHERE name = #{name}
+	</select>
+
+	<!-- 修改商品信息 -->
+	<update id="updateProduct" parameterType="com.xj.entity.Product">
+		UPDATE PRODUCT SET
+		INVENTORY = #{inventory}
+		WHERE ID = #{id,jdbcType=VARCHAR}
+	</update>
+
+
+</mapper>

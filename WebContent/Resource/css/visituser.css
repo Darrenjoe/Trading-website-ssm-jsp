@@ -1,0 +1,11 @@
+/* CSS Document */
+.vis-main{width:970px;margin:30px auto 30px;font:20px "楷体";line-height:36px;box-shadow:2px 2px 10px gray;color:#453132;background:#F3F3F3;}
+.vis-title{text-align:center;line-height:50px;background:#FEE600;font-weight:600;font-size:32px;}
+.vis-user-info{padding:10px 30px;height:180px;}
+.vis-user-info li{width:400px;float:left;display:block;}
+.vis-user-info p{display:inline;}
+.vis-p-title{text-align:center;line-height:50px;background:#FCF16E;font-weight:600;font-size:26px;clear:both;}
+.vis-p-name{padding:10px 20px;text-align:center;}
+.vis-p-name li{float:left;display:block;width:230px;background:#EBACAD;margin-left:2px;}
+.vis-p-list{clear:both;padding:10px 10px;}
+table.table-hover td{width:230px;text-algin:center;}

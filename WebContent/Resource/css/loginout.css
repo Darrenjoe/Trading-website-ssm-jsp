@@ -1,0 +1,100 @@
+/* CSS Document */
+#registered {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	filter: Alpha(opacity = 50);
+	opacity: 0.5;
+	background: #D2C3F4;
+	display: none;
+	z-index: 100;
+}
+
+#registered-tan {
+	position: absolute;
+	width: 500px;
+	left: 50%;
+	top: 50%;
+	margin: -260px 0 0 -250px;
+	display: none;
+	background: #FFFFFF;
+	z-index: 200;
+	font-size: 16px;
+	font-family: "楷体";
+	padding: 20px 30px 20px 30px;
+	color: #403737;
+	text-shadow: 1px 1px 1px #444;
+	border: none;
+	border-radius: 8px;
+}
+
+#registered-tan h1 {
+	padding-bottom: 10px;
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#registered-tan label {
+	display: block;
+	margin: 0px 0px 8px;
+}
+
+#registered-tan label>span {
+	float: left;
+	width: 20%;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 8px;
+	font-weight: bold;
+}
+
+#registered-tan p {
+	text-align: right;
+	margin-right: 50px;
+}
+
+#registered-tan a {
+	text-decoration: none;
+	color: #666666;
+	font-size: 16px;
+}
+
+#registered-tan a:hover {
+	color: #333333;
+	font-size: 18px;
+}
+
+#registered-tan input {
+	border: none;
+	color: #525252;
+	height: 25px;
+	line-height: 15px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	outline: 0 none;
+	padding: 5px 0px 5px 5px;
+	width: 60%;
+	border-radius: 2px;
+	background: #DFDFDF;
+}
+
+#registered-tan button {
+	background: rgb(152, 208, 216);
+	border: none;
+	padding: 10px 25px 10px 25px;
+	color: #333333;
+	border-radius: 4px;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 1px 1px 1px gray;
+	margin-left: 10%;
+}
+
+#registered-tan button:hover {
+	color: #333;
+	background-color: #EBEBEB;
+}

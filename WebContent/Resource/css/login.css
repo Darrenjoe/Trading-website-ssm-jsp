@@ -1,0 +1,113 @@
+/*login*/
+body {
+	margin: 0;
+	pandding: 0;
+	background-size: 100vw 100vh;
+	background-image: url(../images/login.gif);
+}
+/*  */
+.login-logo {
+	background-size: 100px 80px;
+	float: left;
+}
+
+.login-title {
+	float: left;
+	margin-left: 5px;
+	font-size: 50px;
+	color: #CCCCCC;
+}
+.login-main {
+	margin-top: 300px;
+	margin-left: 780px;
+	width: 500px;
+}
+
+.dark-matter {
+	margin: 0 auto 0;
+	width: 500px;
+	padding: 20px 30px 20px 30px;
+	font: 20px "楷体";
+	color: #999999;
+	text-shadow: 1px 1px 1px #444;
+	border: none;
+	border-radius: 8px;
+}
+
+.dark-matter h1 {
+	padding: 0px 0px 10px 40px;
+	display: block;
+	border-bottom: 1px solid #444;
+	margin: -10px -30px 30px -30px;
+}
+
+.dark-matter label {
+	display: block;
+	margin: 0px 0px 8px;
+}
+
+.dark-matter label>span {
+	float: left;
+	width: 20%;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.dark-matter p {
+	text-align: right;
+	margin-right: 50px;
+}
+
+.dark-matter a {
+	text-decoration: none;
+	color: #666666;
+	font-size: 16px;
+}
+
+.dark-matter a:hover {
+	color: #333333;
+	font-size: 18px;
+}
+
+.dark-matter input {
+	border: none;
+	color: #525252;
+	height: 25px;
+	line-height: 15px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	outline: 0 none;
+	padding: 5px 0px 5px 5px;
+	width: 60%;
+	border-radius: 2px;
+	background: #DFDFDF;
+}
+
+.dark-matter button {
+	background: rgb(152, 208, 216);
+	border: none;
+	padding: 10px 25px 10px 25px;
+	color: #333333;
+	border-radius: 4px;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 1px 1px 1px gray;
+	margin-left: 21%;
+}
+
+.dark-matter button:hover {
+	color: #333;
+	background-color: #EBEBEB;
+}
+
+/*ҳ��ע��*/
+footer {
+	height: 30px;
+	margin: 180px auto 0;
+	color: rgb(100, 130, 140);
+	text-align: center;
+	font-size: 17px;
+}

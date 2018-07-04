@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xj.mapper.IAffiche">
+
+	<!-- 添加公告栏信息 -->
+	<insert id="addAffiche" parameterType="com.xj.entity.Affiche">
+		INSERT INTO AFFICHE (
+		ID,
+		TITLE,
+		CONTENT,
+		CREATETIME,
+		PUBLISHER,
+		USERID
+		)
+		VALUES (
+		#{id,jdbcType=VARCHAR},
+		#{title,jdbcType=VARCHAR},
+		#{content,jdbcType=VARCHAR},
+		#{createTime},
+		#{publisher,jdbcType=VARCHAR},
+		#{userId,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<!-- 获取全部公告栏信息 -->
+	<select id="getAllAffiche" resultType="com.xj.entity.Affiche">
+		SELECT * FROM AFFICHE
+	</select>
+
+	<!-- 获取部分公告栏信息 -->
+	<select id="querySomeAffice" resultType="com.xj.entity.Affiche">
+		SELECT * FROM AFFICHE A LIMIT 5
+	</select>
+
+	<!-- 根据用户ID获取公告栏信息 -->
+	<select id="getAfficheByUserId" resultType="com.xj.entity.Affiche">
+		SELECT *
+		FROM AFFICHE
+		WHERE userId = #{userId}
+	</select>
+
+	<!-- 根据用户ID删除公告栏信息 -->
+	<delete id="deleteAfficheById">
+		DELETE FROM AFFICHE WHERE id = #{id,jdbcType=VARCHAR}
+	</delete>
+
+	<!-- 根据内容搜索公告 -->
+	<select id="getAfficheByContent" parameterType="String"
+		resultType="com.xj.entity.Affiche">
+		SELECT *
+		FROM AFFICHE A
+		WHERE A.ID IS NOT NULL
+		<if test=" content != null and content != '' ">
+			AND A.CONTENT LIKE CONCAT(CONCAT('%', #{content}),'%')
+		</if>
+	</select>
+
+	<!-- 分页查询公告 -->
+	<select id="queryMoreAffiche" parameterType="com.xj.entity.param.QueryConditionData"
+		resultType="com.xj.entity.Affiche">
+		SELECT * FROM AFFICHE
+	</select>
+
+
+</mapper>
